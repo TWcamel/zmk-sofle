@@ -58,7 +58,7 @@
 &kp TAB     &kp Q      &kp W         &kp E         &kp R        &kp T              &kp PAGE_DOWN  &kp Y        &kp U        &kp I        &kp O               &kp P                &kp BACKSPACE
 &kp LCTRL   &kp A      &kp S         &kp D         &kp F        &kp G              &kp HOME       &kp H        &kp J        &kp K        &kp L               &kp SEMI             &kp APOS
 &kp LSHFT   &kp Z      &kp X         &kp C         &kp V        &kp B              &kp END        &kp N        &kp M        &kp COMMA    &kp DOT             &kp FSLH             &kp DEL
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt 6 SPACE  &lt 5 BACKSLASH    &kp F1         &lt 6 ENTER  &lt 4 MINUS  &lt 5 EQUAL  &lt 6 LEFT_BRACKET  &lt 2 RIGHT_BRACKET
+&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &lt 6 SPACE  &lt 5 BACKSLASH    &kp F1         &lt 6 ENTER  &lt 4 MINUS  &lt 5 EQUAL  &lt 6 LEFT_BRACKET  &lt 1 RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -67,11 +67,11 @@
 
         win_c {
             bindings = <
-&trans             &trans                 &trans               &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans             &kp LA(LEFT_ARROW)     &kp LA(RIGHT_ARROW)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(PAGE_UP)    &kp LS(LC(PAGE_UP))    &trans               &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(PAGE_DOWN)  &kp LS(LC(PAGE_DOWN))  &trans               &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &to 2
-&trans             &trans                 &trans               &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans             &trans                 &trans               &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&trans             &kp LA(LEFT_ARROW)     &kp LA(RIGHT_ARROW)  &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&kp LC(PAGE_UP)    &kp LS(LC(PAGE_UP))    &trans               &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&kp LC(PAGE_DOWN)  &kp LS(LC(PAGE_DOWN))  &trans               &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans           &trans  &to 2
+&trans             &trans                 &trans               &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans           &trans
             >;
 
             display-name = "win_c";
@@ -94,11 +94,11 @@
         mac_c {
             display-name = "mac_c";
             bindings = <
-&trans             &trans                 &trans                 &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans             &kp LA(LEFT_BRACKET)   &kp LA(RIGHT_BRACKET)  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(PAGE_UP)    &kp LS(LC(PAGE_UP))    &trans                 &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LC(PAGE_DOWN)  &kp LS(LC(PAGE_DOWN))  &trans                 &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &to 0
-&trans             &trans                 &trans                 &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans             &trans                 &trans                 &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&trans             &kp LA(LEFT_BRACKET)   &kp LA(RIGHT_BRACKET)  &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans           &trans  &trans
+&kp LC(PAGE_UP)    &kp LS(LC(PAGE_UP))    &trans                 &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&kp LC(PAGE_DOWN)  &kp LS(LC(PAGE_DOWN))  &trans                 &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans           &trans  &to 0
+&trans             &trans                 &trans                 &trans  &trans  &trans    &trans  &trans          &trans          &trans        &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -120,11 +120,11 @@
         system {
             display-name = "sys";
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &trans  &trans  &trans      &trans     &out OUT_TOG  &trans
-&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans      &trans     &trans        &trans
-&trans  &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &trans        &trans
-&trans  &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader   &trans
-&trans  &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &trans          &trans          &trans        &trans           &out OUT_TOG  &trans
+&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans          &trans          &trans        &trans           &trans        &trans
+&trans  &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans        &trans
+&trans  &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans          &trans          &sys_reset    &soft_off        &bootloader   &trans
+&trans  &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans          &trans          &trans        &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
